@@ -1,8 +1,8 @@
-## Zeppelin
+# Zeppelin
 
 # Overview
+Dockerized Zeppelin image.
 
-- Dockerized Zeppelin image.
 - Version: 2.7.0
 - Operating System: Ubuntu 16.04 with OpenJDK8
 - Base Image: [brennansaul/jdk8](https://hub.docker.com/r/brennansaul/jdk8/) 
