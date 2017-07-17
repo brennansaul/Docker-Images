@@ -45,6 +45,7 @@ From Zeppelin:
 2. Navigate on you local machine to the directory containing the Dockerfile 
 3. Build command: `docker build -t zeppelin .`
 4. Run command: `docker run -d -p 2500:2500 zeppelin`
+5. In your browser navigate to `localhost:2500`
 
 # Official Documentation and Guides
 
