@@ -1,9 +1,11 @@
 FROM resin/raspberry-pi-alpine-node
 MAINTAINER brennansaul jamessaul7629@gmail.com
 
-RUN apk update && \
-    apk add nginx php5-fpm && \
-    mkdir -p /run/nginx
+RUN apk update
+
+RUN apk add nginx php5-fpm 
+
+RUN mkdir -p /run/nginx
 
 ADD www /www
 ADD nginx.conf /etc/nginx/
