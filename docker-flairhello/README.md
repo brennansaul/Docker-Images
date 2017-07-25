@@ -1,7 +1,7 @@
 # FlairHello
 
 ## Overview
-Dockerized Hello World image for dsplaying load balancing.
+A simple hello world webpage made with php and nginx that displays a logo and the docker container ID. Used to show load balancing.
 
 - Operating System: Alpine 
 - Base Image: [ resin/raspberry-pi-alpine-node](https://hub.docker.com/r/resin/raspberry-pi-alpine-node/) 
