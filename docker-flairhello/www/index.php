@@ -20,7 +20,8 @@
 <body>
 	<img id="logo" src="logo.png" />
 	<h1><?php echo "Hello ".($_ENV["NAME"]?$_ENV["NAME"]:"world")."!"; ?></h1>
-	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
+	<?php if($_ENV["HOSTNAME"]) {?><h3>Container: <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
+	<h3>Hosted on swarm node: <?php echo file_get_contents("/tmp/host-hostname"); ?></h3>
 	<?php
 	$links = [];
 	foreach($_ENV as $key => $value) {
