@@ -33,8 +33,16 @@ A simple hello world webpage made with php and nginx that displays a logo and th
 ## How to use from the Docker CLI
 
 1. Make sure that Docker CLI is running 
-2. Start container `docker run -d -p 2500:80 brennansaul/flairhello`
+2. Start container `docker run -d -p 2500:80 --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true brennansaul/flairhello`
 3. In your browser navigate to `localhost:2500`
+
+## How to use as a Swarm Service
+
+    $ docker service create \
+      -p 2500:80 \
+      --replicas 4
+      --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true \
+      brennansaul/flairhello1`
 
 ## Instructions for building and running image on your own computer
 
