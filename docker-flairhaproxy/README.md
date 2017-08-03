@@ -45,9 +45,9 @@ Docker image that when run creates a networking load balancer for all servers de
            # Add more docker nodes here
            
 3. Start your Docker Swarm Service:
-
-        $ docker service create -p 8080:80 --name helloworld --replicas 10 <image name>
-
+        
+        $ docker service create -p 2500:80 --replicas 4 --name <name> --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true <imagename>
+       
 4. Start you HAProxy image **I am running this on a computer not the pi stack**
 
         $ docker run -d -p 80:80 swarm-haproxy
